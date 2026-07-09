@@ -1,17 +1,79 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-}
-
 @theme inline {
-  --color-background: var(--background);
- 
-  --font-sans: var(--font-geist-sans);
+      --font-inter: var(--font-inter);
+      --font-spaceGrotesk: var(--font-spaceGrotesk);
+
+      /* Background */
+      --color-background: var(--background);
+
+      /* Texto */
+      --color-foreground: var(--foreground);
+
+      /* Botones */
+      --color-primary: var(--primary);
+      --color-primary-foreground: var(--primary-foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted: var(--muted);
+      --color-muted-foreground: var(--muted-foreground);
+      
+      /* Accent */
+      --color-accent: var(--accent);
+      --color-accent-foreground: var(--accent-foreground);
+
+      /* border */
+      --color-border: var(--border);
+      --color-input: var(--input);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-  }
+:root {
+      /* Background */
+      --background: oklch(0.985 0.002 264);
+
+      /* Texto */
+
+      --foreground: oklch(0.16 0.02 264);
+      /* Botones */
+
+      --primary: oklch(0.2 0.02 264);
+      --primary-foreground: oklch(0.985 0.002 264);
+      --secondary: oklch(0.96 0.005 264);
+      --secondary-foreground: oklch(0.2 0.02 264);
+      --muted: oklch(0.96 0.005 264);
+      --muted-foreground: oklch(0.5 0.02 264);
+      /* Accent */
+
+      --accent: oklch(0.94 0.008 264);
+      --accent-foreground: oklch(0.2 0.02 264);
+      /* border */
+
+      --border: oklch(0.9 0.008 264);
+      --input: oklch(0.92 0.01 264);
+}
+
+.dark {
+      /* Background */
+
+      --background: oklch(0.14 0.015 264);
+      /* Texto */
+
+      --foreground: oklch(0.97 0.003 264);
+
+      /* Botones */
+
+      --primary: oklch(0.97 0.003 264);
+      --primary-foreground: oklch(0.18 0.018 264);
+      --secondary: oklch(0.24 0.02 264);
+      --secondary-foreground: oklch(0.97 0.003 264);
+      --muted: oklch(0.24 0.02 264);
+      --muted-foreground: oklch(0.68 0.02 264);
+      /* Accent */
+
+      --accent: oklch(0.28 0.025 264);
+      --accent-foreground: oklch(0.97 0.003 264);
+      /* border */
+
+      --border: oklch(1 0 0 / 0.09);
+      --input: oklch(1 0 0 / 0.12);
 }
