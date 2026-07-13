@@ -52,7 +52,7 @@
       --input: oklch(0.92 0.01 264);
 }
 
-.dark {
+[data-theme='dark'] {
       /* Background */
 
       --background: oklch(0.14 0.015 264);

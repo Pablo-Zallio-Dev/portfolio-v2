@@ -1,16 +1,13 @@
-import { ArrowUpRight} from "lucide-react";
-import Button from "./components/ui/Button";
+import { ThemeProvider } from "next-themes";
+import Sidebar from "./components/layout/Sidebar";
+
 
 export default function Home() {
   return (
    <>
-   <Button variant={"primary"} icon={ArrowUpRight} iconPosition="left" >
-      Ver proyectos
-   </Button>  
-   <Button variant={"primary"} icon={ArrowUpRight} >
-      Ver proyectos
-   </Button>
-   
+      <ThemeProvider >
+   <Sidebar />
+      </ThemeProvider>
 
    </>
   );
