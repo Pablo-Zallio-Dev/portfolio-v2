@@ -6,6 +6,8 @@
 
       /* Background */
       --color-background: var(--background);
+      --color-glass: var(--glass);
+
 
       /* Texto */
       --color-foreground: var(--foreground);
@@ -30,6 +32,7 @@
 :root {
       /* Background */
       --background: oklch(0.985 0.002 264);
+      --glass: oklch(1 0 0 / 0.8);
 
       /* Texto */
 
@@ -56,6 +59,8 @@
       /* Background */
 
       --background: oklch(0.14 0.015 264);
+      --glass: oklch(0.2 0.02 264 / 0.88);
+
       /* Texto */
 
       --foreground: oklch(0.97 0.003 264);

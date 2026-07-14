@@ -9,22 +9,22 @@ export interface NavItem {
 export const navigation: NavItem[] = [
       {
             label: 'Inicio',
-            href: '/',
+            href: '#home',
             icon: House,
       },
       {
             label: 'Sobre mi',
-            href: '/about',
+            href: '#about',
             icon: User,
       },
       {
             label: 'Proyectos',
-            href: '/projects',
+            href: '#projects',
             icon: FolderGit2,
       },
       {
             label: 'Contacto',
-            href: '/contact',
+            href: '#contact',
             icon: Mail,
       },
 ]
