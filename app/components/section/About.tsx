@@ -39,7 +39,7 @@ export default function About() {
                               <div className=" flex flex-wrap gap-4 ">
                                     {
                                           stacks.map((stack) => (
-                                                 <BadgeStack key={stack.stack} text={stack.stack} />
+                                                 <BadgeStack key={stack} text={stack} />
                                           ))
                                     }
                               </div>
