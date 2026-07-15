@@ -30,7 +30,7 @@ export default function Sidebar({ variant, onClose }: SidebarProps) {
     lg:top-1/2
     lg:left-6
     lg:-translate-y-1/2
-     flex flex-col ${variant === "desktop" ? (expanded ? "w-62 " : "w-18") : "w-69.5"} py-3 transition-all duration-500 bg-glass border border-border rounded-2xl `}
+     flex flex-col ${variant === "desktop" ? (expanded ? "w-52 " : "w-18") : "w-69.5"} py-3  transition-all duration-500 bg-glass backdrop-blur-sm border border-border rounded-2xl `}
     >
       {variant === "mobile" && (
         <div className=" flex justify-between items-center px-5 pt-5 pb-3 ">
