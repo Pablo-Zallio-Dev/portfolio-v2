@@ -1,6 +1,6 @@
-      export default function Container({ children}: { children: React.ReactNode}){
+      export default function Container({ id, children}: { id: string, children: React.ReactNode}){
             return(
-                  <div className=" w-full px-8 sm:px-20 lg:px-40 ">
+                  <div id={id} className=" flex flex-col justify-center items-center gap-12 w-full min-h-screen pt-8 px-5  ">
                         {children}
                   </div>
             )
