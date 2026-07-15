@@ -10,6 +10,7 @@ export interface NavLink {
   expanded?: boolean;
   active: boolean;
   onHover?: () => void;
+  onClick?: () => void;
 }
 
 export default function NavLink({
@@ -17,9 +18,9 @@ export default function NavLink({
   href,
   icon: Icon,
   variant,
-  expanded,
   active,
   onHover,
+  onClick
 }: NavLink) {
   
       const showLabel = variant === "mobile" || active;
@@ -29,6 +30,7 @@ export default function NavLink({
       key={label}
       href={href}
       onMouseEnter={onHover}
+      onClick={onClick}
       className={`
         flex items-center gap-3 rounded-xl p-3
         ${active ? "bg-muted text-foreground" : "text-muted-foreground"}

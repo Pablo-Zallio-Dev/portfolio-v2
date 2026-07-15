@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Space_Grotesk, Geist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,7 +32,7 @@ export default function RootLayout({
         <ThemeProvider>
     <html
       lang="en"
-      className={`  ${inter.variable} ${spaceGrotesk.variable} bg-background h-full antialiased`}
+      className={cn("scroll-smooth", "bg-background", "h-full", inter.variable, spaceGrotesk.variable, "font-sans", geist.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

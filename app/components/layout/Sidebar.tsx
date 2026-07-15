@@ -51,6 +51,7 @@ export default function Sidebar({ variant, onClose }: SidebarProps) {
             expanded={isExpanded}
             active={activeLink === navItem.label}
             onHover={() => setActiveLink(navItem.label)}
+            onClick={onClose}
             key={navItem.label}
             {...navItem}
           />

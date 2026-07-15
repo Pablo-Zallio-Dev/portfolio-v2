@@ -14,7 +14,7 @@ export default function Home() {
                         <div className="hidden lg:block">
                               <Sidebar variant="desktop" />
                         </div>
-                        <main className="min-h-screen ">
+                        <main className="min-h-screen bg-bgBackground ">
                               <Hero />
                               <About />
                               <Projects />
