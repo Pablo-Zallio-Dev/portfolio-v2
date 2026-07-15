@@ -6,6 +6,7 @@ import AboutCard from "../ui/AboutCard";
 import Container from "../ui/Container";
 import BadgeStack from "../ui/BadgeStack";
 import { stacks } from "@/data/stack";
+import { SpinningText } from "@/components/ui/spinning-text"
 
 export default function About() {
 
@@ -15,7 +16,8 @@ export default function About() {
       return (
             <Container id="about">
                   <div className=" grid grid-cols-1 gap-16 lg:grid-cols-[1fr_2fr] w-full lg:w-3/4 ">
-                        <div className="  flex flex-col gap-3 ">
+                        <div className="  flex flex-col lg:flex-col-reverse lg:self-start gap-3 ">
+                              <SpinningText reverse={true} duration={6} radius={8} className=" my-30 ">Pablo • Zallio • Web • Developer • </SpinningText>
                               <SectionHeader text={"01 - sobre mi"} />
                               <SectionTitle text={"Un artesano digital con obsesión por el detalle."} />
                         </div>
@@ -37,7 +39,7 @@ export default function About() {
                               <div className=" flex flex-wrap gap-4 ">
                                     {
                                           stacks.map((stack) => (
-                                                 <BadgeStack key={stack.stack} text={stack.stack} />
+                                                 <BadgeStack key={stack} text={stack} />
                                           ))
                                     }
                               </div>
