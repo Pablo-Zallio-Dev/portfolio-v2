@@ -5,15 +5,16 @@ import {
   ScrollVelocityContainer,
   ScrollVelocityRow,
 } from "@/app/components/ui/scroll-based-velocity";
+import Container from "../ui/Container";
+import SectionParagraph from "../common/SectionParagraph";
 
 export default function Hero() {
   return (
     <>
-      <section
+      <Container
         id="home"
-        className=" flex flex-col justify-center items-center gap-12 w-full h-svh"
       >
-        <section className="flex flex-col justify-center items-start gap-5 xl:gap-10 lg:max-w-3xl 2xl:max-w-6xl px-5 w-full min-w-0    ">
+        <section className="flex flex-col justify-center items-start gap-5 xl:gap-10 w-full  lg:w-3/4 min-w-0    ">
           <section className="flex items-center gap-1 py-1 px-3 border border-border rounded-full ">
             <div className=" w-1.5 h-1.5 rounded-full bg-brand animate-pulse "></div>
             <p className=" font-spaceGrotesk text-xs text-muted-foreground ">
@@ -24,11 +25,13 @@ export default function Hero() {
             Construyo <span className=" text-brand ">interfaces web</span> que
             combinan rendimiento técnico con experiencia de usuario.
           </h1>
-          <p className=" max-w-3xl font-inter text-base lg:text-lg text-muted-foreground ">
-            Soy un desarrollador <i>Frontend</i> especializado en React,
+          <div className=" max-w-3xl ">
+          <SectionParagraph>
+             Soy un desarrollador <i>Frontend</i> especializado en React,
             TypeScript y Tailwind. Me apasiona crear experiencias web rápidas,
             accesibles y escalables que resuelven problemas reales de usuarios.
-          </p>
+          </SectionParagraph>
+          </div>
           <section className=" flex  items-start lg:items-center gap-2 w-full ">
             <Button variant={"primary"} icon={ArrowUpRight}>
               <Link href={"#projects"}>Ver Proyectos</Link>
@@ -61,7 +64,7 @@ export default function Hero() {
             scroll
           </p>
         </section>
-      </section>
+      </Container>
     </>
   );
 }
