@@ -18,10 +18,12 @@ export default function Contact() {
                                     <p className="text-center">Estoy abierto a colaboraciones de producto, ingeniería y diseño. Cuéntame en qué estás trabajando.
                                     </p>
                               </SectionParagraph>
+                              <Link href="mailto:elcorreoquequieres@correo.com">
                               <Button variant={"primary"}>
                                     <Mail size={16} />
                                     <p className="">pablozalliodev@gmail.com</p>
                               </Button>
+                              </Link>
                         <Form />
                         <div className=" flex justify-center items-center gap-6 font-inter text-xs text-muted-foreground px-6 ">
                               <Link className="  " href={""}>Github</Link>
