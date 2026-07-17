@@ -16,7 +16,9 @@ export default function Hero() {
                         id="home"
                   >
                         <section className="flex flex-col justify-center items-start gap-5 xl:gap-10 w-full  lg:w-3/4 min-w-0    ">
-                              <AvailabilityBadge />
+                              <AvailabilityBadge>
+                                    Disponible para nuevos proyectos
+                              </AvailabilityBadge>
                               <h1 className=" font-spaceGrotesk font-semibold text-3xl sm:text-6xl md:text-7xl md:tracking-tighter">
                                     Construyo <span className=" text-brand ">interfaces web</span> que
                                     combinan rendimiento técnico con experiencia de usuario.
