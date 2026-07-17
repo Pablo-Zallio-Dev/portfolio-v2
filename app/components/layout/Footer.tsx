@@ -20,7 +20,7 @@ export default function Footer() {
                                           </SectionParagraph>
 
                                     </div>
-                                    <Link href={"mailto"} >
+                                    <Link href="mailto:elcorreoquequieres@correo.com" >
                                           <Button variant={"outline"}>
                                                 <Mail size={14} />
                                                 pablozalliodev@gmail.com
