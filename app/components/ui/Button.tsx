@@ -7,7 +7,7 @@ export type ButtonVariant = 'primary' | 'outline'
 
 const VariantsButton: Record<ButtonVariant, string> = {
       primary: ' bg-primary font-inter text-primary-foreground  ',
-      outline: ' border border-border '
+      outline: ' border border-border font-inter'
 }
 
 export type ButtonProps = {

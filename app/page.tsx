@@ -5,6 +5,7 @@ import Hero from "./components/section/Hero";
 import About from "./components/section/About";
 import Projects from "./components/section/Projects";
 import Contact from "./components/section/Contact";
+import Footer from "./components/layout/Footer";
 
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
                               <Projects />
                               <Contact />
                         </main>
-
+                        <Footer />
                         <div className="lg:hidden">
                               <MobileMenu />
                         </div>
