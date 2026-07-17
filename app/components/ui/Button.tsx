@@ -3,24 +3,27 @@ import { LucideIcon } from "lucide-react";
 
 
 
-export type ButtonVariant = 'primary' | 'outline'
+export type ButtonVariant = 'primary' | 'outline' | 'primarySmall' | 'outlineSmall'
 
 const VariantsButton: Record<ButtonVariant, string> = {
-      primary: ' bg-primary font-inter text-primary-foreground cursor-pointer  ',
-      outline: ' bg-background border border-border font-inter cursor-pointer'
+      primary: '  py-2.5 px-5  bg-primary font-inter text-primary-foreground cursor-pointer   ',
+      outline: '  py-2.5 px-5  bg-background border border-border font-inter cursor-pointer ' ,
+      primarySmall: '  py-1.5 px-3  bg-primary font-inter text-primary-foreground cursor-pointer ',
+      outlineSmall:'  py-1.5 px-3  bg-background border border-border font-inter cursor-pointer'
 }
 
 export type ButtonProps = {
       children: React.ReactNode,
       variant: ButtonVariant,
       icon?: LucideIcon,
+      small?: boolean
       iconPosition?: 'left' | 'right'
       onClick?: () => void,
 }
 
-export default function Button({ children, variant, icon: Icon, iconPosition = 'right', onClick }: ButtonProps) {
+export default function Button({ children, variant, icon: Icon, small, iconPosition = 'right', onClick }: ButtonProps) {
       return (
-            <button className={` flex items-center gap-2 w-max py-2.5 px-5 rounded-full font-medium text-xs lg:text-sm 
+            <button className={` flex items-center gap-2 w-max  rounded-full font-medium ${small ?' text-[10px]' : 'text-xs lg:text-sm '} 
              ${VariantsButton[variant]} `} onClick={onClick}>
                   { Icon && iconPosition === "left" &&  <Icon size={16} />}
 
