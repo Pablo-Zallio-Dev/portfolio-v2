@@ -97,9 +97,9 @@ export default function Form() {
                                     errors.message?.type === 'maxLength' && <ErrorForm> Lo siento, el mensaje tiene que ser mas corto que 255 caracteres </ErrorForm>
                               }
                         </div>
-                        <div className="mt-8">
+                        <div className="mt-8 ">
                               <Button variant="primary">
-                                    <input type="submit" value={send ? 'Enviado!' : 'Enviar mensaje'} />
+                                    <input type="submit" value={send ? 'Enviado!' : 'Enviar mensaje'} className="cursor-pointer" />
                                     {
                                           send
                                                 ? <MailCheck size={16} />
