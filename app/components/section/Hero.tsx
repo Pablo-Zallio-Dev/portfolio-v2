@@ -32,7 +32,7 @@ export default function Hero() {
                               </div>
                               <section className=" flex  items-start lg:items-center gap-2 w-full ">
 
-                                    <Link href={"#projects"}>
+                                    <Link href={"#projects"} className=" hover:scale-105 hover:-translate-y-0.5 transition-transform duration-100 ">
                                           <Button variant={"primary"} icon={ArrowUpRight}>
                                                 Ver Proyectos
                                           </Button>
