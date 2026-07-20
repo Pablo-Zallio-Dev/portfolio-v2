@@ -62,7 +62,7 @@ export default function Form() {
      
 
       return (
-            <section className=" w-full max-w-4xl my-12 bg-bgBackground p-6 rounded-3xl border border-border ">
+            <section className=" w-full max-w-4xl my-12 bg-bgBackground p-6 rounded-3xl border border-border shadow-xl/20 ">
                   <div className=" flex justify-between items-center ">
                         <div className="">
                               <p className=" font-spaceGrotesk font-bold text-lg ">Escríbeme</p>
@@ -86,7 +86,7 @@ export default function Form() {
                                           Nombre
                                     </label>
                                     <input
-                                          className=" py-2.5 px-3.5 rounded-2xl bg-background/40 border border-border outline-0 font-inter text-sm "
+                                          className=" py-2.5 px-3.5 rounded-2xl bg-background/40 border border-border outline-0 font-inter text-sm focus:shadow-md/50 focus:shadow-brand focus:border focus:border-brand/50 "
                                           id="name"
                                           type="text"
                                           placeholder="Tu nombre"
@@ -105,7 +105,7 @@ export default function Form() {
                                           Email
                                     </label>
                                     <input
-                                          className=" py-2.5 px-3.5 rounded-2xl bg-background/40 border border-border  outline-0 font-inter text-sm  "
+                                          className=" py-2.5 px-3.5 rounded-2xl bg-background/40 border border-border  outline-0 font-inter text-sm focus:shadow-md/50 focus:shadow-brand focus:border focus:border-brand/50  "
                                           type="email"
                                           id="email"
                                           placeholder="tu@email.com"
@@ -125,7 +125,7 @@ export default function Form() {
                                     Cuentame tu idea
                               </label>
                               <textarea
-                                    className=" w-full py-2.5 px-3.5 rounded-2xl bg-background/40 border border-border resize-none outline-0 font-inter text-sm  "
+                                    className=" w-full py-2.5 px-3.5 rounded-2xl bg-background/40 border border-border resize-none outline-0 font-inter text-sm focus:shadow-md/50  focus:shadow-brand focus:border focus:border-brand/50 "
                                     id="message"
                                     rows={5}
                                     {...register("message", {
@@ -138,7 +138,7 @@ export default function Form() {
                                     errors.message?.type === 'maxLength' && <ErrorForm> Lo siento, el mensaje tiene que ser mas corto que 255 caracteres </ErrorForm>
                               }
                         </div>
-                        <div className="mt-8 ">
+                        <div className="mt-8 hover:scale-105 hover:-translate-y-1 transition-transform duration-200 ">
                               <Button variant="primary" type="submit">
                                     {send ? "Enviado!" : "Enviar mensaje"}
 

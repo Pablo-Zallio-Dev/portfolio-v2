@@ -22,7 +22,7 @@ export default function Hero() {
                               </AvailabilityBadge>
                               <h1 className=" font-spaceGrotesk 2xl:w-3/4 font-semibold text-3xl sm:text-6xl md:text-7xl md:tracking-tighter">
 
-                                    Construyo experiencias digitales rápidas, intuitivas y preparadas <span className="text-muted-foreground">para crecer</span>.
+                                    Construyo experiencias digitales rápidas, intuitivas y preparadas <span className=" italic text-brand/70">para crecer.</span>
                               </h1>
                               <div className=" max-w-3xl ">
                                     <SectionParagraph>
@@ -57,12 +57,12 @@ export default function Hero() {
                               </section>
                         </section>
 
-                        <section className=" flex flex-col items-center justify-center gap-2 ">
+                        <section className=" flex flex-col items-center justify-center gap-2 text-brand ">
                              
-                              <div className=" py-3 w-min border border-border rounded-full animate-bounce ">
+                              <div className=" py-3 w-min border border-border rounded-full animate-bounce  ">
                                     <MoveDown size={14} />
                               </div>
-                              <p className=" font-spaceGrotesk text-xs tracking-widest uppercase ">
+                              <p className=" font-spaceGrotesk font-semibold text-xs  tracking-widest uppercase  ">
                                     scroll
                               </p>
                         </section>

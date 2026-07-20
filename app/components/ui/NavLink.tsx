@@ -54,7 +54,7 @@ export default function NavLink({
                   target={social ? "_blank" : undefined}
                   className={`
         flex items-center gap-3 rounded-xl p-3
-        ${active ? "bg-muted text-foreground" : "text-muted-foreground"}
+        ${active ? "bg-brand/20 text-foreground" : "text-muted-foreground"}
         
     `}
 
