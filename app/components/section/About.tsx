@@ -1,4 +1,4 @@
-import { Eye, Heart, Layers, Zap } from "lucide-react";
+import { Code, Gauge, Layers, Sparkles } from "lucide-react";
 import SectionHeader from "../common/SectionHeader";
 import SectionParagraph from "../common/SectionParagraph";
 import SectionTitle from "../common/SectionTitle";
@@ -6,7 +6,8 @@ import AboutCard from "../ui/AboutCard";
 import Container from "../ui/Container";
 import BadgeStack from "../ui/BadgeStack";
 import { stacks } from "@/data/stack";
-import { SpinningText } from "@/components/ui/spinning-text"
+import { SpinningText } from "@/app/components/ui/spinning-text"
+import FadeIn from "../common/FadeIn";
 
 export default function About() {
 
@@ -15,7 +16,8 @@ export default function About() {
 
       return (
             <Container id="about">
-                  <div className=" grid grid-cols-1 gap-16 lg:grid-cols-[1fr_2fr] w-full lg:w-3/4 ">
+                  <FadeIn>
+                  <div className=" grid grid-cols-1 gap-16 lg:grid-cols-[1fr_2fr] w-full lg:w-3/4  ">
                         <div className="  flex flex-col lg:flex-col-reverse lg:self-start gap-3 ">
                               <SpinningText reverse={true} duration={6} radius={8} className=" my-30 ">Pablo • Zallio • Web • Developer • </SpinningText>
                               <div className=" ">
@@ -23,22 +25,22 @@ export default function About() {
                                     <SectionTitle text={"Un artesano digital con obsesión por el detalle."} />
                               </div>
                         </div>
-                        <div className=" flex flex-col gap-25 ">
+                        <div className=" flex flex-col items-center gap-25 ">
                               <div className=" flex flex-col gap-4 ">
                                     <SectionParagraph>
-                                          Me enfoco en el desarrollo de interfaces modernas mediante el uso de componentes reutilizables. Aplico React, TypeScript y Storybook para garantizar que cada elemento visual sea consistente, escalable y esté alineado con los estándares actuales de desarrollo web.
+                                         Me gusta transformar problemas complejos en interfaces simples, rápidas y fáciles de usar. Disfruto colaborando con equipos de producto y diseño, aunque también puedo liderar proyectos completos para clientes como freelance.
                                     </SectionParagraph>
                                     <SectionParagraph>
-                                          Domino el ecosistema moderno de CSS (Tailwind, Sass) y la traducción precisa de prototipos de Figma a componentes funcionales (pixel-perfect). Mi enfoque prioriza la estructura limpia de carpetas y la mantenibilidad, buscando siempre que la interfaz no solo sea estética, sino técnica y funcionalmente sólida.
+                                          No me limito a escribir código. Me interesa entender el contexto del proyecto, las necesidades del usuario y los objetivos del negocio para aportar valor más allá de la implementación técnica.
                                     </SectionParagraph>
                               </div>
                               <div className=" grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 ">
-                                    <AboutCard icon={Eye} titleCard={"Detalle"} textCard={"Cada píxel, cada transición y cada interacción cuenta."} />
-                                    <AboutCard icon={Zap} titleCard={"Rendimiento"} textCard={"Código limpio, rápido y pensado para escalar."} />
-                                    <AboutCard icon={Layers} titleCard={"Escalabilidad"} textCard={"Sistemas que crecen sin perder calidad ni claridad."} />
-                                    <AboutCard icon={Heart} titleCard={"Calidad"} textCard={"Productos que me enorgullezco de entregar."} />
+                                    <AboutCard icon={Code} titleCard={"Desarrollo Frontend"} textCard={"Interfaces modernas con React, Next.js y TypeScript."} />
+                                    <AboutCard icon={Gauge} titleCard={"UI centrada en el usuario"} textCard={"Diseños limpios, accesibles y orientados a ofrecer la mejor experiencia."} />
+                                    <AboutCard icon={Sparkles} titleCard={"Rendimiento"} textCard={"Aplicaciones optimizadas para ofrecer velocidad, estabilidad y una excelente experiencia."} />
+                                    <AboutCard icon={Layers} titleCard={"Código mantenible"} textCard={"Arquitecturas escalables, reutilizables y fáciles de mantener."} />
                               </div>
-                              <div className=" flex flex-wrap gap-4 ">
+                              <div className=" flex justify-center gap-4 py-5 px-3 w-max rounded-xl bg-background border border-border shadow-lg/20 ">
                                     {
                                           stacks.map((stack) => (
                                                 <BadgeStack key={stack} text={stack} />
@@ -47,6 +49,7 @@ export default function About() {
                               </div>
                         </div>
                   </div>
+                  </FadeIn>
             </Container>
       )
 }

@@ -4,29 +4,55 @@ import AvailabilityBadge from "./AvailabilityBadge";
 import Button from "./Button";
 import { useForm } from "react-hook-form";
 import ErrorForm from "./ErrorForm";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
+type FormValues = {
+      name: string;
+      email: string;
+      message: string;
+};
 
 export default function Form() {
-      const { register, formState: { errors }, handleSubmit, reset } = useForm();
+      const { register, formState: { errors }, handleSubmit, reset } = useForm<FormValues>();
 
       const [send, setSend] = useState(false)
 
-      const onSubmit = (data: object) => {
-            console.log(data)
-            setSend(true)
-            reset()
-      }
 
-      useEffect(() => {
-            if (!send) return;
+      const onSubmit = async (data: FormValues) => {
+            try {
+                  setSend(true);
 
-            const timer = setTimeout(() => {
+                  const formData = new FormData();
+
+                  formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY!);
+                  formData.append("name", data.name);
+                  formData.append("email", data.email);
+                  formData.append("message", data.message);
+
+                  const response = await fetch("https://api.web3forms.com/submit", {
+                        method: "POST",
+                        body: formData,
+                  });
+
+                  const result = await response.json();
+
+                  if (result.success) {
+                        reset();
+
+                        // Mostrar "Enviado!" durante 2 segundos
+                        setTimeout(() => {
+                              setSend(false);
+                        }, 3000);
+                  } else {
+                        setSend(false);
+                  }
+            } catch (error) {
+                  console.error(error);
                   setSend(false);
-            }, 1500);
+            }
+      };
 
-            return () => clearTimeout(timer);
-      }, [send]);
-
+     
 
       return (
             <section className=" w-full max-w-4xl my-12 bg-bgBackground p-6 rounded-3xl border border-border ">
@@ -37,9 +63,11 @@ export default function Form() {
                                     Respondo en menos de 24Hs
                               </p>
                         </div>
-                        <AvailabilityBadge>
-                              <p className=" uppercase font-bold ">online</p>
-                        </AvailabilityBadge>
+                        <div className="uppercase font-bold">
+                              <AvailabilityBadge>
+                                    online
+                              </AvailabilityBadge>
+                        </div>
                   </div>
                   <form onSubmit={handleSubmit(onSubmit)} className=" flex flex-col items-center gap-6 mt-8  ">
                         <div className=" flex flex-col sm:flex-row sm:justify-between w-full gap-4 sm:gap-6 ">
@@ -83,6 +111,12 @@ export default function Form() {
                               </div>
                         </div>
                         <div className=" relative w-full mt-4 ">
+                              <label
+                                    className="  uppercase font-inter font-semibold tracking-widest text-xs text-muted-foreground "
+                                    htmlFor="message"
+                              >
+                                    Cuentame tu idea
+                              </label>
                               <textarea
                                     className=" w-full py-2.5 px-3.5 rounded-2xl bg-background/40 border border-border resize-none outline-0 font-inter text-sm  "
                                     id="message"
@@ -98,14 +132,14 @@ export default function Form() {
                               }
                         </div>
                         <div className="mt-8 ">
-                              <Button variant="primary">
-                                    <input type="submit" value={send ? 'Enviado!' : 'Enviar mensaje'} className="cursor-pointer" />
-                                    {
-                                          send
-                                                ? <MailCheck size={16} />
-                                                : <ArrowUpRight size={16} />
-                                    }
+                              <Button variant="primary" type="submit">
+                                    {send ? "Enviado!" : "Enviar mensaje"}
 
+                                    {send ? (
+                                          <MailCheck size={16} />
+                                    ) : (
+                                          <ArrowUpRight size={16} />
+                                    )}
                               </Button>
                         </div>
                   </form>

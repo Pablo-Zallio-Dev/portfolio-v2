@@ -8,8 +8,8 @@ import LinkFooter from "../ui/LinkFooter";
 
 export default function Footer() {
       return (
-            <section className=" flex justify-center  w-full bg-bgBackground px-3 pb-12 " >
-                  <div className="  w-full md:w-3/4 max-w-6xl py-8 px-4 bg-background my-8 rounded-xl border border-border ">
+            <section className=" flex justify-center  w-full bg-bgBackground px-3 pb-12  " >
+                  <div className="  w-full md:w-3/4 max-w-6xl py-8 px-4 bg-background my-8 rounded-xl border border-border shadow-xl/20 ">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:justify-items-center pb-10 border-b border-border ">
 
                               <div className=" flex flex-col gap-3 ">
