@@ -18,12 +18,13 @@ export type ButtonProps = {
       icon?: LucideIcon,
       small?: boolean
       iconPosition?: 'left' | 'right'
+      type?: "button" | "submit" | "reset";
       onClick?: () => void,
 }
 
-export default function Button({ children, variant, icon: Icon, small, iconPosition = 'right', onClick }: ButtonProps) {
+export default function Button({ children, variant, icon: Icon, small, iconPosition = 'right', onClick, type='button' }: ButtonProps) {
       return (
-            <button className={` flex items-center gap-2 w-max  rounded-full font-medium ${small ?' text-[10px]' : 'text-xs lg:text-sm '} 
+            <button type={type} className={` flex items-center gap-2 w-max  rounded-full font-medium ${small ?' text-[10px]' : 'text-xs lg:text-sm '} 
              ${VariantsButton[variant]} `} onClick={onClick}>
                   { Icon && iconPosition === "left" &&  <Icon size={16} />}
 
