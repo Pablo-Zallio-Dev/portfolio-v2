@@ -21,7 +21,10 @@ export default function Form() {
       const onSubmit = async (data: FormValues) => {
              console.log("onSubmit ejecutado");
   console.log(data);
+
+  console.log("ENV:", process.env.NEXT_PUBLIC_WEB3FORMS_KEY);
             try {
+
                   setSend(true);
 
                   const formData = new FormData();
