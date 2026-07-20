@@ -9,7 +9,7 @@ export default function MobileMenu() {
   return (
     <div className="   " >
       <button
-        className=" fixed bottom-5 right-2 z-50 flex justify-center items-center w-14 h-14 rounded-full bg-background border border-border transition-transform duration-200 "
+        className=" fixed bottom-5 right-5 z-50 flex justify-center items-center w-14 h-14 rounded-full bg-background border border-border transition-transform duration-200 "
         onClick={() => setIsOpen(!isOpen)}
       >
         <X

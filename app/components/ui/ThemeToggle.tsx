@@ -1,3 +1,5 @@
+"use client";
+
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
@@ -7,36 +9,44 @@ export interface ToggleTheme {
   active: boolean;
   onHover?: () => void;
 }
+
 export default function ThemeToggle({
   variant,
   active,
   onHover,
 }: ToggleTheme) {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
-  const themeToggle = () =>
-    theme === "light" ? setTheme("dark") : setTheme("light");
   const showLabel = variant === "mobile" || active;
 
+  const handleToggleTheme = () => {
+    setTheme(resolvedTheme === "light" ? "dark" : "light");
+  };
 
   return (
     <button
-      className={`
-    flex items-center gap-3 rounded-xl p-3 w-full 
-    ${active ? "bg-muted text-foreground" : "text-muted-foreground"}
-  `}
+      type="button"
       onMouseEnter={onHover}
-      onClick={themeToggle}
+      onClick={handleToggleTheme}
+      className={`
+        flex items-center gap-3 rounded-xl p-3 w-full
+        ${active ? "bg-muted text-foreground" : "text-muted-foreground"}
+      `}
     >
-      {theme === "light" ? <Moon size={16} className="shrink-0" /> : <Sun size={16} className="shrink-0" />}
-      <p
+      {resolvedTheme === "light" ? (
+        <Moon size={16} className="shrink-0" />
+      ) : (
+        <Sun size={16} className="shrink-0" />
+      )}
+
+      <span
         className={`
-    overflow-hidden whitespace-nowrap font-inter text-sm font-medium tracking-tight  transition-transform duration-300
-    ${showLabel ? "max-w-40 opacity-100 ml-1" : "max-w-0 opacity-0 ml-0"}
-  `}
+          overflow-hidden whitespace-nowrap font-inter text-sm text-muted-foreground font-medium tracking-tight transition-all duration-300
+          ${showLabel ? "max-w-40 opacity-100 ml-1" : "max-w-0 opacity-0 ml-0"}
+        `}
       >
-        {` Modo ${theme === "light" ? "Oscuro" : "Claro"}`}
-      </p>
+        Modo {resolvedTheme === "light" ? "Oscuro" : "Claro"}
+      </span>
     </button>
   );
 }

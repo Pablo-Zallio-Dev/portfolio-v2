@@ -22,7 +22,7 @@ export default function Project() {
                               <div className=" grid grid-cols-1 py-8 ">
                                     {
                                           projects.map((proj) => (
-                                                <div key={proj.id} className="grid grid-cols-3 md:grid-cols-[120px_1fr_1fr_auto]  items-center pb-8 pt-6 px-2 border-b border-border group hover:bg-chart-1/20 transition-all duration-300 ">
+                                                <div key={proj.id} className="grid grid-cols-3 md:grid-cols-[120px_1fr_1fr_auto]  items-center pb-8 pt-6 px-2 border-b border-border group hover:bg-chart-1/20  transition-all duration-300 ">
                                                       <p className=" text-xs font-spaceGrotesk "> {proj.date} </p>
                                                       <div className=" flex flex-col gap-2 font-spaceGrotesk ">
                                                             <p className=" font-bold text-sm sm:text-xl md:text-2xl group-hover:translate-x-1 transition-transform duration-200 "> {proj.title} </p>
@@ -31,8 +31,8 @@ export default function Project() {
                                                       <div className=" hidden md:block  ">
                                                             <p className=" w-3/4 font-inter text-sm "> {proj.description} </p>
                                                       </div>
-                                                      <button className=" flex flex-col  items-center justify-self-end " onClick={() => setSelectedProject(proj)}>
-                                                            <div className=" group-hover:rotate-45 transition-transform duration-200 ">
+                                                      <button className=" flex flex-col  items-center justify-self-end p-2 group-hover:border group-hover:border-border group-hover:shadow-xl/20 hover:-translate-x-2 hover:scale-125 transition-transform duration-200 rounded-2xl " onClick={() => setSelectedProject(proj)}>
+                                                            <div className=" group-hover:rotate-45 group-hover:text-brand transition-transform duration-200 ">
                                                                   <Plus size={16} />
                                                             </div>
                                                             <p className=" font-spaceGrotesk text-[10px] ">Mas info.</p>
