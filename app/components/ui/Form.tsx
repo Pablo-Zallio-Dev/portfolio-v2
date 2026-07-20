@@ -19,11 +19,17 @@ export default function Form() {
 
 
       const onSubmit = async (data: FormValues) => {
+             console.log("onSubmit ejecutado");
+  console.log(data);
+
+  console.log("ENV:", process.env.NEXT_PUBLIC_WEB3FORMS_KEY);
             try {
+
                   setSend(true);
 
                   const formData = new FormData();
 
+                  console.log(process.env.NEXT_PUBLIC_WEB3FORMS_KEY);
                   formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY!);
                   formData.append("name", data.name);
                   formData.append("email", data.email);
