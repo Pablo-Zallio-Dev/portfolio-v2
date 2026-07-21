@@ -19,7 +19,7 @@ export default function Hero() {
                   >
                         <section className="flex flex-col justify-center items-start gap-5 xl:gap-10 w-full  lg:w-3/4 min-w-0    ">
                               <AvailabilityBadge>
-                                    Disponible para nuevos proyectos
+                                    Pablo Zallio Frontend Developer
                               </AvailabilityBadge>
                               <h1 className=" font-spaceGrotesk 2xl:w-3/4 font-semibold text-3xl sm:text-6xl md:text-7xl md:tracking-tighter">
 
@@ -27,7 +27,7 @@ export default function Hero() {
                               </h1>
                               <div className=" max-w-3xl ">
                                     <SectionParagraph>
-                                          Soy desarrollador Frontend especializado en React, Next.js y tecnologías modernas. Ayudo a empresas y clientes a convertir ideas en productos digitales con un enfoque en rendimiento, diseño y experiencia de usuario.
+                                          Soy Pablo, desarrollador Frontend especializado en React, Next.js y tecnologías modernas. Ayudo a empresas y clientes a convertir ideas en productos digitales con un enfoque en rendimiento, diseño y experiencia de usuario.
                                     </SectionParagraph>
                               </div>
                               <section className=" flex flex-col md:flex-row justify-center md:justify-start items-center  gap-2 w-full pt-8 ">

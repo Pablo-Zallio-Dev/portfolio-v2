@@ -16,6 +16,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
       title: "Pablo Zallio - Web Developer",
       description: "Portafolio de desarrollador frontend Pablo Zallio",
+      keywords: ['Frontend', 'Frontend developer', 'Desarrollo frontend'],
+openGraph:{
+      title:'PZWD - Pablo Zallio, Frontend Developer'
+      
+}
 };
 
 export default function RootLayout({
