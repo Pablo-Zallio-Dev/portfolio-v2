@@ -40,10 +40,10 @@ export default function About() {
                                     <AboutCard icon={Sparkles} titleCard={"Rendimiento"} textCard={"Aplicaciones optimizadas para ofrecer velocidad, estabilidad y una excelente experiencia."} />
                                     <AboutCard icon={Layers} titleCard={"Código mantenible"} textCard={"Arquitecturas escalables, reutilizables y fáciles de mantener."} />
                               </div>
-                              <div className=" flex flex-wrap justify-center gap-4 py-5 px-3  rounded-xl bg-background border border-border shadow-lg/20 ">
+                              <div className=" flex flex-wrap justify-center gap-4 py-5 px-1.5 xl:px-5  rounded-xl bg-background border border-border shadow-lg/20 ">
                                     {
                                           stacks.map((stack) => (
-                                                <BadgeStack key={stack} text={stack} />
+                                                <BadgeStack key={stack.skill} skill={stack.skill} icon={stack.icon} />
                                           ))
                                     }
                               </div>

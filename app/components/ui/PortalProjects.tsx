@@ -58,7 +58,7 @@ export default function PortalProjects({ project, closePortal }: { project: Proj
                               <div className=" flex gap-2 ">
                                     {
                                           project.stack.map((stack) => (
-                                                <BadgeStack key={stack} text={stack} />
+                                                <BadgeStack key={stack} skill={stack} />
                                           ))
                                     }
                               </div>
@@ -70,7 +70,7 @@ export default function PortalProjects({ project, closePortal }: { project: Proj
                                                 Ver demo en vivo
                                           </Button>
                                     </Link>
-                                    <Link target="_blank" href={project.href}>
+                                    <Link target="_blank" href={project.github}>
                                           <Button small variant={"outlineSmall"}>
                                                 <RiGithubFill />
                                                 GitHub
