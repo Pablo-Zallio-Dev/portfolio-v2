@@ -65,13 +65,13 @@ export default function PortalProjects({ project, closePortal }: { project: Proj
                               <p className=" w-full font-inter text-xs sm:text-sm sm:leading-5  "> {project.descriptionPortal} </p>
                               <div className=" flex gap-1 ">
                                     <Link target="_blank" href={project.href}>
-                                          <Button small variant={"primarySmall"}>
+                                          <Button small variant={"primarySmall"}  ariaLabel={"Boton para ver el proyecto en vivo"}>
                                                 <SquareArrowOutUpRight size={16} />
                                                 Ver demo en vivo
                                           </Button>
                                     </Link>
                                     <Link target="_blank" href={project.github}>
-                                          <Button small variant={"outlineSmall"}>
+                                          <Button small variant={"outlineSmall"} ariaLabel="Boton para ver el github del proyecto">
                                                 <RiGithubFill />
                                                 GitHub
                                           </Button>
@@ -79,7 +79,7 @@ export default function PortalProjects({ project, closePortal }: { project: Proj
                               </div>
 
                               <div className=" self-center ">
-                                    <Button variant={"outline"} onClick={closePortal}>
+                                    <Button ariaLabel={'Cerrar tarjeta de proyecto'} variant={"outline"} onClick={closePortal}>
                                           Cerrar
                                     </Button>
 

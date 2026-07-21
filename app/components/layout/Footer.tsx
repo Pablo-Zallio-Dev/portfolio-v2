@@ -22,7 +22,7 @@ export default function Footer() {
               </SectionParagraph>
             </div>
             <Link href="mailto:pablozalliodev@gmail.com">
-              <Button variant={"outline"}>
+              <Button variant={"outline"} ariaLabel={"Boton para enviar correo electronico"}>
                 <Mail size={14} />
                 pablozalliodev@gmail.com
               </Button>

@@ -139,7 +139,7 @@ export default function Form() {
                               }
                         </div>
                         <div className="mt-8 hover:scale-105 hover:-translate-y-1 transition-transform duration-200 ">
-                              <Button variant="primary" type="submit">
+                              <Button ariaLabel="Boton para enviar formulario" variant="primary" type="submit">
                                     {send ? "Enviado!" : "Enviar mensaje"}
 
                                     {send ? (

@@ -11,6 +11,7 @@ export default function MobileMenu() {
       <button
         className=" fixed bottom-5 right-5 z-50 flex justify-center items-center w-14 h-14 rounded-full bg-background border border-border transition-transform duration-200 "
         onClick={() => setIsOpen(!isOpen)}
+        aria-label="Abrir o cerrar menu movil"
       >
         <X
           size={20}

@@ -32,13 +32,13 @@ export default function Hero() {
                               <section className=" flex flex-col md:flex-row justify-center md:justify-start items-center  gap-2 w-full pt-8 ">
 
                                     <Link href={"#projects"} className=" hover:scale-105 hover:-translate-y-0.5 transition-transform duration-100 ">
-                                          <Button variant={"primary"} icon={ArrowUpRight}>
+                                          <Button ariaLabel="Boton para ver proyectos" variant={"primary"} icon={ArrowUpRight}>
                                                 Ver Proyectos
                                           </Button>
                                     </Link>
 
                                     <Link href={"#contact"}>
-                                          <Button variant={"outline"}>
+                                          <Button ariaLabel="Boton para ir a la seccion contacto" variant={"outline"}>
                                                 Contactar
                                           </Button>
                                     </Link>

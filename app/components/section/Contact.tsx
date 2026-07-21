@@ -22,7 +22,7 @@ export default function Contact() {
                                     </SectionParagraph>
                               </div>
                               <Link href="mailto:elcorreoquequieres@correo.com">
-                                    <Button variant={"primary"}>
+                                    <Button ariaLabel="Boton para enviar correo electronico" variant={"primary"}>
                                           <Mail size={16} />
                                           <p className="">pablozalliodev@gmail.com</p>
                                     </Button>
