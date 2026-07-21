@@ -1,5 +1,4 @@
-"use client";
-
+'use client'
 import { motion } from "framer-motion";
 import { ProjectType } from "@/data/projects";
 import Button from "./Button";
