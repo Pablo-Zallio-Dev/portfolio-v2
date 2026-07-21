@@ -16,8 +16,21 @@ export interface ProjectType {
 
 
 export const projects: ProjectType[] = [
+           {
+                  id: '005',
+                  image: '/images/image_proj005.webp',
+                  imageMobile: '/images/image_proj005-mobile.webp',
+                  date: '06-2026',
+                  href: 'https://aeroswim.vercel.app/',
+                  github: 'https://github.com/Pablo-Zallio-Dev/aeroswim',
+                  title: 'Aeroswim',
+                  subtitle: 'Web para un club de natación.',
+                  description: 'Plataforma digital para un club de natación de alto rendimiento, enfocada en entrenamiento, rendimiento deportivo y gestión de la experiencia del nadador.',
+                  descriptionPortal: 'Aero Swim es una experiencia web inmersiva para un centro de alto rendimiento especializado en natación. El sitio presenta la filosofía del club, sus instalaciones, horarios, resultados y sistema de acceso mediante una interfaz moderna y orientada al rendimiento. El diseño combina una estética deportiva y tecnológica con una navegación modular, datos en tiempo real y una fuerte identidad visual.',
+                  stack: ['NextJS','TailwindCss', 'React-Hook-Form']
+            },
             {
-                  id: '001',
+                  id: '004',
                   image: '/images/image_proj001.webp',
                   imageMobile: '/images/image_proj001-mobile.webp',
                   date: '05-2026',
@@ -30,7 +43,7 @@ export const projects: ProjectType[] = [
                   stack: ['NextJS','TailwindCss', 'React-Hook-Form']
             },
             {
-                  id: '002',
+                  id: '003',
                   image: '/images/image_proj002.webp',
                   imageMobile: '/images/image_proj002-mobile.webp',
                   date: '03-2026',
@@ -43,7 +56,7 @@ export const projects: ProjectType[] = [
                   stack: ['React', 'React Router', 'Tailwind']
             },
             {
-                  id: '003',
+                  id: '002',
                   image: '/images/image_proj003.webp',
                   imageMobile: '/images/image_proj003-mobile.webp',
                   date: '01-2026',
@@ -56,7 +69,7 @@ export const projects: ProjectType[] = [
                   stack: ['React', 'Tailwind']
             },
             {
-                  id: '004',
+                  id: '001',
                   image: '/images/image_proj004.webp',
                   imageMobile: '/images/image_proj004-mobile.webp',
                   date: '10-2025',
