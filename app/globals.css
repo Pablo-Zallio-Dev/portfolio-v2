@@ -27,7 +27,7 @@
 
   /* Muted */
   --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(60.411% 0.00119 14.005);
+  --muted-foreground: oklch(51.56% 0.0025 15.946);
 
   /* Accent */
   --accent: oklch(0.97 0 0);
@@ -75,7 +75,7 @@
 
   /* Muted */
   --muted: oklch(0.24 0.02 264);
-  --muted-foreground: oklch(0.68 0.02 264);
+  --muted-foreground: oklch(74.432% 0.0151 268.472);
 
   /* Accent */
   --accent: oklch(0.28 0.025 264);

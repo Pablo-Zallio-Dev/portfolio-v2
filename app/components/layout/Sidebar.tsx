@@ -39,7 +39,7 @@ export default function Sidebar({ variant, onClose }: SidebarProps) {
             Navegacion
           </h2>
           {onClose && (
-            <button className=" text-muted-foreground " onClick={onClose}>
+            <button aria-label="Boton para cerrar el menu movil" className=" text-muted-foreground " onClick={onClose}>
               <X size={16} />
             </button>
           )}

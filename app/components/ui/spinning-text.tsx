@@ -1,5 +1,4 @@
-"use client"
-
+'use client'
 import React, { type ComponentPropsWithoutRef } from "react"
 import { motion, Transition, Variants } from "motion/react"
 

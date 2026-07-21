@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import Button from "../ui/Button";
 import { ArrowUpRight, MoveDown } from "lucide-react";
@@ -22,7 +23,7 @@ export default function Hero() {
                               </AvailabilityBadge>
                               <h1 className=" font-spaceGrotesk 2xl:w-3/4 font-semibold text-3xl sm:text-6xl md:text-7xl md:tracking-tighter">
 
-                                    Construyo experiencias digitales rápidas, intuitivas y preparadas <span className=" italic text-brand/70">para crecer.</span>
+                                    Construyo experiencias digitales rápidas, intuitivas y preparadas <span className=" italic text-brand/80">para crecer.</span>
                               </h1>
                               <div className=" max-w-3xl ">
                                     <SectionParagraph>
