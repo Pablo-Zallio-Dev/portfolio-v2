@@ -15,6 +15,7 @@ const VariantsButton: Record<ButtonVariant, string> = {
 export type ButtonProps = {
       children: React.ReactNode,
       variant: ButtonVariant,
+      ariaLabel: string,
       icon?: LucideIcon,
       small?: boolean
       iconPosition?: 'left' | 'right'
@@ -22,9 +23,9 @@ export type ButtonProps = {
       onClick?: () => void,
 }
 
-export default function Button({ children, variant, icon: Icon, small, iconPosition = 'right', onClick, type='button' }: ButtonProps) {
+export default function Button({ children, variant, ariaLabel, icon: Icon, small, iconPosition = 'right', onClick, type='button' }: ButtonProps) {
       return (
-            <button type={type} className={` flex items-center gap-2 w-max  rounded-full font-medium ${small ?' text-[10px]' : 'text-xs lg:text-sm '} 
+            <button aria-label={ariaLabel} type={type} className={` flex items-center gap-2 w-max  rounded-full font-medium ${small ?' text-[10px]' : 'text-xs lg:text-sm '} 
              ${VariantsButton[variant]} `} onClick={onClick}>
                   { Icon && iconPosition === "left" &&  <Icon size={16} />}
 
