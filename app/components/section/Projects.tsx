@@ -31,7 +31,7 @@ export default function Project() {
                                                       <div className=" hidden md:block  ">
                                                             <p className=" w-3/4 font-inter text-sm "> {proj.description} </p>
                                                       </div>
-                                                      <button className=" flex flex-col  items-center justify-self-end p-2 group-hover:border group-hover:border-border group-hover:shadow-xl/20 hover:-translate-x-2 hover:scale-125 transition-transform duration-200 rounded-2xl " onClick={() => setSelectedProject(proj)}>
+                                                      <button className=" flex flex-col  items-center justify-self-end p-2  group-hover:shadow-xl/20 hover:-translate-y-2 hover:scale-115 transition-transform duration-200 rounded-2xl " onClick={() => setSelectedProject(proj)}>
                                                             <div className=" group-hover:rotate-45 group-hover:text-brand transition-transform duration-200 ">
                                                                   <Plus size={16} />
                                                             </div>
