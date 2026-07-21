@@ -18,8 +18,8 @@ export interface ProjectType {
 export const projects: ProjectType[] = [
             {
                   id: '001',
-                  image: '/images/image_proj001.jpg',
-                  imageMobile: '/images/image_proj001-mobile.jpg',
+                  image: '/images/image_proj001.webp',
+                  imageMobile: '/images/image_proj001-mobile.webp',
                   date: '05-2026',
                   href: 'https://cosas-ricas.vercel.app/',
                   github: 'https://github.com/Pablo-Zallio-Dev/cosas_ricas',
@@ -31,11 +31,11 @@ export const projects: ProjectType[] = [
             },
             {
                   id: '002',
-                  image: '/images/image_proj002.jpg',
-                  imageMobile: '/images/image_proj002-mobile.jpg',
+                  image: '/images/image_proj002.webp',
+                  imageMobile: '/images/image_proj002-mobile.webp',
                   date: '03-2026',
                   href: 'https://exclusive-shop-snowy.vercel.app/',
-                  github: 'https://github.com/Pablo-Zallio-Dev/exclusiveShop/tree/main',
+                  github: 'https://github.com/Pablo-Zallio-Dev/exclusiveShop',
                   title: 'Exclusive',
                   subtitle: 'E-commerce',
                   description: 'Tienda online multi-categoría con buscador, sistema de favoritos, carrito y ofertas destacadas.',
@@ -44,8 +44,8 @@ export const projects: ProjectType[] = [
             },
             {
                   id: '003',
-                  image: '/images/image_proj003.jpg',
-                  imageMobile: '/images/image_proj003-mobile.jpg',
+                  image: '/images/image_proj003.webp',
+                  imageMobile: '/images/image_proj003-mobile.webp',
                   date: '01-2026',
                   href: 'https://job-app-phi-six.vercel.app/',
                   github: 'https://github.com/Pablo-Zallio-Dev/job-app',
@@ -57,8 +57,8 @@ export const projects: ProjectType[] = [
             },
             {
                   id: '004',
-                  image: '/images/image_proj004.jpg',
-                  imageMobile: '/images/image_proj004-mobile.jpg',
+                  image: '/images/image_proj004.webp',
+                  imageMobile: '/images/image_proj004-mobile.webp',
                   date: '10-2025',
                   href: 'https://fem-dictionary-web-app.vercel.app/#House',
                   github: 'https://github.com/Pablo-Zallio-Dev/dictionary-app',
