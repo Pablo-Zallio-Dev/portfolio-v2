@@ -16,7 +16,7 @@ export default function Footer() {
             </h3>
             <div className=" max-w-68 lg:max-w-90 ">
               <SectionParagraph small>
-                Desarrollador full-stack e ingeniero de interfaces. Diseño
+                Desarrollador frontend e ingeniero de interfaces. Diseño
                 productos digitales con precisión, carácter y atención al
                 detalle.
               </SectionParagraph>
