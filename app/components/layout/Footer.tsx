@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
         </div>
         <div className=" flex flex-col sm:flex-row justify-between pt-10 text-center font-inter text-xs text-muted-foreground ">
-          <p className="">© 2026 Álvaro Ruiz.</p>
+          <p className="">© 2026 Pablo Zallio.</p>
           <p className="">Hecho con NextJS, Tailwind CSS y Mucho cariño</p>
         </div>
       </div>
