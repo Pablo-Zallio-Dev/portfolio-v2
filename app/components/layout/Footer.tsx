@@ -16,9 +16,7 @@ export default function Footer() {
             </h3>
             <div className=" max-w-68 lg:max-w-90 ">
               <SectionParagraph small>
-                Desarrollador frontend e ingeniero de interfaces. Diseño
-                productos digitales con precisión, carácter y atención al
-                detalle.
+                Frontend developer. Código, curiosidad y demasiada atención por los detalles.
               </SectionParagraph>
             </div>
             <Link href="mailto:pablozalliodev@gmail.com">

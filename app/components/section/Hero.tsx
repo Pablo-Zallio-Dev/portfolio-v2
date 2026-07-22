@@ -17,17 +17,17 @@ export default function Hero() {
                   <Container
                         id="home"
                   >
-                        <section className="flex flex-col justify-center items-start gap-5 xl:gap-10 w-full  lg:w-3/4 min-w-0    ">
+                        <section className="flex flex-col justify-center items-start gap-5 xl:gap-10 w-full  lg:w-3/4 min-w-0 ">
                               <AvailabilityBadge>
                                     Pablo Zallio Frontend Developer
                               </AvailabilityBadge>
                               <h1 className=" font-spaceGrotesk 2xl:w-3/4 font-semibold text-3xl sm:text-6xl md:text-7xl md:tracking-tighter">
 
-                                    Construyo experiencias digitales rápidas, intuitivas y preparadas <span className=" italic text-brand/80">para crecer.</span>
+                                    No solo debe funcionar. También tiene que <span className=" italic text-brand/80">sentirse.</span>
                               </h1>
-                              <div className=" max-w-3xl ">
+                              <div className=" max-w-5xl ">
                                     <SectionParagraph>
-                                          Soy Pablo, desarrollador Frontend especializado en React, Next.js y tecnologías modernas. Ayudo a empresas y clientes a convertir ideas en productos digitales con un enfoque en rendimiento, diseño y experiencia de usuario.
+                                          Soy Pablo. Antes de construir algo, me gusta pensar en cómo debería sentirse. Empiezo con una idea, exploro sus posibilidades y trato de llevarla un poco más lejos. Después vienen el código, las pruebas y esos pequeños detalles que quizá nadie note, pero que terminan dándole personalidad a lo que construyo.
                                     </SectionParagraph>
                               </div>
                               <section className=" flex flex-col md:flex-row justify-center md:justify-start items-center  gap-2 w-full pt-8 ">
@@ -54,7 +54,7 @@ export default function Hero() {
                         </section>
 
                         <section className=" flex flex-col items-center justify-center gap-2 text-brand ">
-                             
+
                               <div className=" py-3 w-min border border-border rounded-full animate-bounce  ">
                                     <MoveDown size={14} />
                               </div>
