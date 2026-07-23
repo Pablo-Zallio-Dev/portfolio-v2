@@ -33,9 +33,6 @@ export default function About() {
                                           <SectionParagraph>
                                                 Disfruto especialmente ese momento en el que todo empieza a encajar y puedes ver el resultado final. Soy bastante exigente con los detalles, me gusta el código limpio y siempre intento llevar cada proyecto un poco más lejos de lo necesario. No porque todo tenga que ser perfecto, sino porque siempre hay algo más que aprender.
                                           </SectionParagraph>
-                                          <SectionParagraph>
-                                                No me importa demasiado qué tipo de proyecto sea. Si puede aportar valor, me interesa. Y si además me obliga a aprender algo nuevo, mejor todavía.
-                                          </SectionParagraph>
                                     </div>
                                     <div className=" grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 ">
                                           <AboutCard icon={Code} titleCard={"Desarrollo Frontend"} textCard={"Interfaces modernas con React, Next.js y TypeScript."} />
