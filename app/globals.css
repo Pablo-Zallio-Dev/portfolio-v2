@@ -149,3 +149,9 @@
   --color-destructive: var(--destructive);
   --color-chart-1: var(--chart-1);
 }
+
+@media (min-width: 1024px) {
+  .desktop-sidebar {
+    display: block !important;
+  }
+}

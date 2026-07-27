@@ -1,4 +1,3 @@
-import { ThemeProvider } from "next-themes";
 import MobileMenu from "./components/layout/MobileMenu";
 import Sidebar from "./components/layout/Sidebar";
 import Hero from "./components/section/Hero";
@@ -11,8 +10,7 @@ import Footer from "./components/layout/Footer";
 export default function Home() {
       return (
             <>
-                  <ThemeProvider>
-                        <div className="hidden lg:block">
+                        <div className=" max-lg:hidden lg:block ">
                               <Sidebar variant="desktop" />
                         </div>
                         <main className="min-h-screen bg-bgBackground ">
@@ -25,7 +23,6 @@ export default function Home() {
                         <div className="lg:hidden">
                               <MobileMenu />
                         </div>
-                  </ThemeProvider>
             </>
       );
 }
