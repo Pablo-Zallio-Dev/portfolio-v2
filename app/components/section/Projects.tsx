@@ -28,7 +28,7 @@ export default function Project() {
                                                             <p className=" font-bold text-sm sm:text-xl md:text-2xl group-hover:translate-x-1 transition-transform duration-200 "> {proj.title} </p>
                                                             <p className=" text-xs "> {proj.subtitle} </p>
                                                       </div>
-                                                      <div className=" hidden md:block  ">
+                                                      <div className=" max-md:hidden md:block  ">
                                                             <p className=" w-3/4 font-inter text-sm "> {proj.description} </p>
                                                       </div>
                                                       <button className=" flex flex-col  items-center justify-self-end p-2  group-hover:shadow-xl/20 hover:-translate-y-2 hover:scale-115 transition-transform duration-200 rounded-2xl " onClick={() => setSelectedProject(proj)}>
