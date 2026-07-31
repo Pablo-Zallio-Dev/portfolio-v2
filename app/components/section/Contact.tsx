@@ -7,6 +7,7 @@ import Container from "../ui/Container";
 import Form from "../ui/Form";
 import Link from "next/link";
 import FadeIn from "../common/FadeIn";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
       return (
@@ -15,7 +16,7 @@ export default function Contact() {
                   <section className=" flex flex-col w-full lg:w-3/4 py-12">
                         <div className=" flex flex-col items-center gap-6 ">
                               <SectionHeader text={"03.- contacto"} />
-                              <SectionTitle center text={"¿Contruimos algo interesante?"} />
+                              <SectionTitle center text={"¿Construimos algo interesante?"} />
                               <div className=" lg:w-3/4 text-center ">
                                     <SectionParagraph>
                                           Estoy abierto tanto a colaborar en proyectos freelance como a formar parte de un equipo donde pueda seguir creciendo y aportar valor.
@@ -28,10 +29,14 @@ export default function Contact() {
                                     </Button>
                               </Link>
                               <Form />
-                              <div className=" flex justify-center items-center gap-6 font-inter text-xs text-muted-foreground px-6 ">
-                                    <Link className="  " href={""}>Github</Link>
-                                    <p className="">|</p>
-                                    <Link className=" " href={""}>Linkedin</Link>
+                              <div className=" flex justify-center items-center gap-2 font-inter text-xs text-muted-foreground px-6 ">
+                                    <Link className=" flex items-center gap-1 " href={""}>
+                                    <FaGithub />
+                                    Github</Link>
+                                    <p className=" mx-6 ">|</p>
+                                    <Link className=" flex items-center gap-1 " href={""}>Linkedin
+                                    <FaLinkedin size={14}/>
+                                    </Link>
 
                               </div>
                         </div>
