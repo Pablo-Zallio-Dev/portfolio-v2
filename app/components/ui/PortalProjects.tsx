@@ -19,7 +19,7 @@ export default function PortalProjects({ project, closePortal }: { project: Proj
                   transition={{ duration: 0.25 }}
             >
                   <motion.div
-                        className="w-full max-w-120  bg-background  rounded-xl overflow-hidden"
+                        className="w-full  max-w-120  bg-background  rounded-xl overflow-hidden"
                         initial={{
                               opacity: 0,
                               y: 20,
@@ -54,7 +54,7 @@ export default function PortalProjects({ project, closePortal }: { project: Proj
                                     </div>
                                     <p className=" min-w-max text-[10px] sm:text-xs font-spaceGrotesk "> {project.date} </p>
                               </div>
-                              <div className=" flex gap-2 ">
+                              <div className=" flex flex-wrap gap-2 ">
                                     {
                                           project.stack.map((stack) => (
                                                 <BadgeStack key={stack} skill={stack} />
