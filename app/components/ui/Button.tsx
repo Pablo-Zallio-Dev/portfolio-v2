@@ -21,12 +21,13 @@ export type ButtonProps = {
       iconPosition?: 'left' | 'right'
       type?: "button" | "submit" | "reset";
       onClick?: () => void,
+      className?: string
 }
 
-export default function Button({ children, variant, ariaLabel, icon: Icon, small, iconPosition = 'right', onClick, type='button' }: ButtonProps) {
+export default function Button({ children,className , variant, ariaLabel, icon: Icon, small, iconPosition = 'right', onClick, type='button' }: ButtonProps) {
       return (
             <button aria-label={ariaLabel} type={type} className={` flex items-center gap-2 w-max  rounded-full font-medium ${small ?' text-[10px]' : 'text-xs lg:text-sm '} 
-             ${VariantsButton[variant]} `} onClick={onClick}>
+             ${VariantsButton[variant]} ${className} `} onClick={onClick}>
                   { Icon && iconPosition === "left" &&  <Icon size={16} />}
 
                   {children}

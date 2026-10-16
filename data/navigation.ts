@@ -1,4 +1,4 @@
-import { FolderGit2, House, LucideIcon, User, Mail, HousePlus, UsersRound, FolderOpen, MailOpen } from "lucide-react"
+import { FolderGit2, House, LucideIcon, User, Mail, HousePlus, UsersRound, FolderOpen, MailOpen, PencilRuler, PencilSparkles } from "lucide-react"
 
 export interface NavItem {
       label: string,
@@ -20,6 +20,12 @@ export const navigation: NavItem[] = [
             href: '#about',
             icon: User,
             activeIcon: UsersRound
+      },
+      {
+            label: 'Servicios',
+            href: '#services',
+            icon: PencilRuler,
+            activeIcon: PencilSparkles,
       },
       {
             label: 'Proyectos',

@@ -17,7 +17,7 @@ export interface ProjectType {
 
 export const projects: ProjectType[] = [
       {
-            id: '006',
+            id: '004',
             image: '/images/image_proj006.webp',
             imageMobile: '/images/image_proj006-mobile.webp',
             date: '08-2026',
@@ -25,38 +25,39 @@ export const projects: ProjectType[] = [
             github: 'https://github.com/Pablo-Zallio-Dev/vitaliscenter',
             title: 'VitalisCenter',
             subtitle: 'Web para una clínica de fisioterapia',
-            description: 'Web para una clínica de fisioterapia con una dirección visual editorial, cálida y tranquila, alejada de la estética sanitaria habitual. Desarrollada mobile first con un sistema de componentes reutilizable.',
-            descriptionPortal: 'Proyecto freelance desarrollado de principio a fin. Una web editorial y cálida que se aleja de la estética típica del sector, construida con Atomic Design y mobile first. Incluye Inicio, Servicios, Nosotros y Contacto, con formulario, botón de WhatsApp y mapa. El diseño se trabajó con ayuda de IA; el desarrollo es propio.',
+            description: 'Una clínica de fisioterapia quería diferenciarse del resto. Creé una web cálida y clara, pensada para móvil, donde el paciente contacta fácil por WhatsApp.',
+            descriptionPortal: 'Proyecto freelance desarrollado de principio a fin para una clínica de fisioterapia que quería alejarse de la estética sanitaria habitual y transmitir cercanía y confianza. Creé una web editorial y cálida, con Inicio, Servicios, Nosotros y Contacto, donde el paciente entiende qué ofrece la clínica y puede contactar por formulario o WhatsApp, además de encontrar su ubicación en el mapa. Diseñada primero para móvil, que es desde donde la mayoría de pacientes la va a ver, y construida con Atomic Design para que sea fácil de mantener y ampliar. El diseño se trabajó con ayuda de IA; el desarrollo es propio.',
             stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'React Hook Form', 'Zustand']
       },
       {
-            id: '005',
+            id: '003',
+            image: '/images/image_proj001.webp',
+            imageMobile: '/images/image_proj001-mobile.webp',
+            date: '05-2026',
+            href: 'https://cosas-ricas.vercel.app/',
+            github: 'https://github.com/Pablo-Zallio-Dev/cosas_ricas',
+            title: 'Cosas Ricas',
+            subtitle: 'Pasteleria Artesanal',
+            description: 'Una pastelería familiar de Torrent quería que sus clientes vieran sus tartas y encargaran fácil. Creé una web con catálogo y pedidos por WhatsApp.',
+            descriptionPortal: 'Proyecto para una pastelería familiar de Torrent especializada en tartas artesanales, que necesitaba mostrar su trabajo y facilitar los encargos personalizados. Creé una web con galería de productos, una sección de presupuestos para bodas, cumpleaños y eventos, y contacto directo por WhatsApp, para que el cliente vea las tartas y haga su encargo en pocos pasos desde el móvil.',
+            stack: ['NextJS', 'TailwindCss', 'React-Hook-Form']
+      },
+      {
+            id: '002',
             image: '/images/image_proj005.webp',
             imageMobile: '/images/image_proj005-mobile.webp',
             date: '06-2026',
             href: 'https://aeroswim.vercel.app/',
             github: 'https://github.com/Pablo-Zallio-Dev/aeroswim',
             title: 'Aeroswim',
-            subtitle: 'Web para un club de natación.',
-            description: 'Plataforma digital para un club de natación de alto rendimiento, enfocada en entrenamiento, rendimiento deportivo y gestión de la experiencia del nadador.',
-            descriptionPortal: 'Aero Swim es una experiencia web inmersiva para un centro de alto rendimiento especializado en natación. El sitio presenta la filosofía del club, sus instalaciones, horarios, resultados y sistema de acceso mediante una interfaz moderna y orientada al rendimiento. El diseño combina una estética deportiva y tecnológica con una navegación modular, datos en tiempo real y una fuerte identidad visual.',
+            subtitle: 'Proyecto de portfolio · Web para un club de natación',
+            description: 'Proyecto conceptual de una web para un club de natación de alto rendimiento, con una identidad visual deportiva y tecnológica.',
+            descriptionPortal: 'Proyecto de portfolio, sin cliente real, que plantea cómo sería la web de un centro de alto rendimiento especializado en natación. Presenta la filosofía del club, sus instalaciones, horarios y resultados mediante una navegación modular y una identidad visual deportiva y tecnológica. Lo desarrollé para explorar un estilo más inmersivo y mostrar cómo trabajo la interfaz y la animación.',
             stack: ['NextJS', 'TailwindCss', 'React-Hook-Form']
       },
+
       {
-            id: '004',
-            image: '/images/image_proj001.webp',
-            imageMobile: '/images/image_proj001-mobile.webp',
-            date: '05-2026',
-            href: 'https://cosas-ricas.vercel.app/',
-            github: 'https://github.com/Pablo-Zallio-Dev/cosas_ricas',
-            title: 'Cosas Ricas2',
-            subtitle: 'Pasteleria Artesanal',
-            description: 'Landing page para pastelería artesanal, con catálogo de tartas y pedidos personalizados vía WhatsApp.',
-            descriptionPortal: 'Sitio para una pastelería familiar de Torrent especializada en tartas artesanales. Incluye galería de productos, sección de presupuestos para encargos personalizados (bodas, cumpleaños, eventos) y contacto directo por WhatsApp.',
-            stack: ['NextJS', 'TailwindCss', 'React-Hook-Form']
-      },
-      {
-            id: '003',
+            id: '001',
             image: '/images/image_proj002.webp',
             imageMobile: '/images/image_proj002-mobile.webp',
             date: '03-2026',
@@ -67,31 +68,5 @@ export const projects: ProjectType[] = [
             description: 'Tienda online multi-categoría con buscador, sistema de favoritos, carrito y ofertas destacadas.',
             descriptionPortal: 'E-commerce con catálogo de productos organizado por categorías (belleza, fragancias, muebles, electrónica y más), incluyendo buscador, filtro por categorías, sistema de favoritos, carrito de compra y sección de ofertas del día con descuentos y valoraciones por producto.',
             stack: ['React', 'React Router', 'Tailwind']
-      },
-      {
-            id: '002',
-            image: '/images/image_proj003.webp',
-            imageMobile: '/images/image_proj003-mobile.webp',
-            date: '01-2026',
-            href: 'https://job-app-phi-six.vercel.app/',
-            github: 'https://github.com/Pablo-Zallio-Dev/job-app',
-            title: 'Job Application Tracker',
-            subtitle: 'Web App',
-            description: 'Herramienta para organizar y hacer seguimiento de tus candidaturas laborales en un solo lugar.',
-            descriptionPortal: 'Aplicación para gestionar candidaturas de empleo: registro de empresa, puesto, plataforma (LinkedIn, etc.) y estado (aplicado, entrevista, rechazado, oferta), con contadores en tiempo real y notas por candidatura.',
-            stack: ['React', 'Tailwind']
-      },
-      {
-            id: '001',
-            image: '/images/image_proj004.webp',
-            imageMobile: '/images/image_proj004-mobile.webp',
-            date: '10-2025',
-            href: 'https://fem-dictionary-web-app.vercel.app/#House',
-            github: 'https://github.com/Pablo-Zallio-Dev/dictionary-app',
-            title: 'Dictionary Web App',
-            subtitle: 'Web App',
-            description: 'Buscador de palabras con definiciones, pronunciación en audio y ejemplos de uso.',
-            descriptionPortal: 'Diccionario interactivo con búsqueda de palabras, definiciones organizadas por categoría gramatical, ejemplos de uso, reproducción de audio de pronunciación, selector de tipografía (sans serif, serif, mono) y modo oscuro/claro. Basado en el challenge de Frontend Mentor.',
-            stack: ['HTML', 'Css', 'JavaScript']
       },
 ]

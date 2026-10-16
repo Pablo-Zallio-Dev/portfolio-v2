@@ -6,20 +6,28 @@ import BadgeStack from "./BadgeStack";
 import { SquareArrowOutUpRight } from "lucide-react";
 import Link from "next/link";
 import { RiGithubFill } from "react-icons/ri";
+import { useEffect } from "react";
 
 export default function PortalProjects({ project, closePortal }: { project: ProjectType, closePortal: () => void }) {
+
+      useEffect(() => {
+            document.body.style.overflow = "hidden";
+            return () => {
+                  document.body.style.overflow = "unset";
+            };
+      }, []);
 
       return (
 
             <motion.div
-                  className="fixed z-80 inset-0 flex justify-center items-center  bg-black/50 px-6"
+                  className="fixed z-80 inset-0 flex justify-center pt-12 bg-black/50 px-6"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.25 }}
             >
                   <motion.div
-                        className="w-full  max-w-120  bg-background  rounded-xl overflow-hidden"
+                        className="relative w-full max-w-120 bg-background rounded-xl overflow-hidden max-h-[85vh] flex flex-col shadow-2xl"
                         initial={{
                               opacity: 0,
                               y: 20,
@@ -42,48 +50,58 @@ export default function PortalProjects({ project, closePortal }: { project: Proj
                               damping: 22,
                         }}
                   >
-                        <div className={` relative w-full h-50 sm:h-60 md:h-70  bg-cover bg-top bg- border-b border-chart-1 `} style={{ backgroundImage: `url(${project.image})` }} >
-                              <div className=" absolute -bottom-20 right-12 w-24 h-51.5 bg-cover bg-no-repeat rounded-lg border border-black shadow-lg/30 " style={{ backgroundImage: `url(${project.imageMobile})` }} />
-                        </div>
-                        <section className="  flex flex-col  gap-6  p-6 pt-20 sm:pt-26">
+                        <div className="flex-1 min-h-0 overflow-y-auto scrollbar-thin [scrollbar-color:color-mix(in_oklab,currentColor_30%,transparent)_transparent]">
+                              <div
+                                    className="relative w-full h-50 sm:h-60 md:h-70 bg-cover bg-top border-b border-chart-1 shrink-0"
+                                    style={{ backgroundImage: `url(${project.image})` }}
+                              >
+                                    <div
+                                          className="absolute right-8 -bottom-16 w-20 sm:w-24 h-44 sm:h-51.5 bg-cover bg-no-repeat rounded-lg border border-black shadow-lg/30 z-10"
+                                          style={{ backgroundImage: `url(${project.imageMobile})` }}
+                                    />
+                              </div>
 
-                              <div className=" flex justify-between items-center ">
-                                    <div className=" min-w-max flex flex-col gap-1 font-spaceGrotesk ">
-                                          <p className="  font-bold text-xl lg:text-2xl"> {project.title} </p>
-                                          <p className="  text-xs md:text-sm "> {project.subtitle} </p>
+                              <section className="flex flex-col gap-6 p-6 pt-20 sm:pt-26 pb-24">
+                                    <div className="flex justify-between items-center">
+                                          <div className="min-w-max flex flex-col gap-1 font-spaceGrotesk">
+                                                <p className="font-bold text-xl lg:text-2xl"> {project.title} </p>
+                                                <p className="text-xs md:text-sm"> {project.subtitle} </p>
+                                          </div>
+                                          <p className="min-w-max text-[10px] sm:text-xs font-spaceGrotesk"> {project.date} </p>
                                     </div>
-                                    <p className=" min-w-max text-[10px] sm:text-xs font-spaceGrotesk "> {project.date} </p>
-                              </div>
-                              <div className=" flex flex-wrap gap-2 ">
-                                    {
-                                          project.stack.map((stack) => (
-                                                <BadgeStack key={stack} skill={stack} />
-                                          ))
-                                    }
-                              </div>
-                              <p className=" w-full font-inter text-xs sm:text-sm sm:leading-5  "> {project.descriptionPortal} </p>
-                              <div className=" flex gap-1 ">
-                                    <Link target="_blank" href={project.href}>
-                                          <Button small variant={"primarySmall"}  ariaLabel={"Boton para ver el proyecto en vivo"}>
-                                                <SquareArrowOutUpRight size={16} />
-                                                Ver demo en vivo
-                                          </Button>
-                                    </Link>
-                                    <Link target="_blank" href={project.github}>
-                                          <Button small variant={"outlineSmall"} ariaLabel="Boton para ver el github del proyecto">
-                                                <RiGithubFill />
-                                                GitHub
-                                          </Button>
-                                    </Link>
-                              </div>
 
-                              <div className=" self-center ">
-                                    <Button ariaLabel={'Cerrar tarjeta de proyecto'} variant={"outline"} onClick={closePortal}>
-                                          Cerrar
-                                    </Button>
+                                    <div className="flex flex-wrap gap-2">
+                                          {
+                                                project.stack.map((stack) => (
+                                                      <BadgeStack key={stack} skill={stack} />
+                                                ))
+                                          }
+                                    </div>
 
-                              </div>
-                        </section>
+                                    <p className="w-full font-inter text-xs sm:text-sm sm:leading-5"> {project.descriptionPortal} </p>
+
+                                    <div className="flex gap-1">
+                                          <Link target="_blank" href={project.href}>
+                                                <Button small variant={"primarySmall"} ariaLabel={"Boton para ver el proyecto en vivo"}>
+                                                      <SquareArrowOutUpRight size={16} />
+                                                      Ver demo en vivo
+                                                </Button>
+                                          </Link>
+                                          <Link target="_blank" href={project.github}>
+                                                <Button small variant={"outlineSmall"} ariaLabel="Boton para ver el github del proyecto">
+                                                      <RiGithubFill />
+                                                      GitHub
+                                                </Button>
+                                          </Link>
+                                    </div>
+                              </section>
+                        </div>
+
+                        <div className="absolute bottom-0 inset-x-0 z-20 bg-background/20 py-4 border-t border-chart-1/20 flex justify-center backdrop-blur-xs">
+                              <Button ariaLabel={'Cerrar tarjeta de proyecto'} variant={"outline"} onClick={closePortal}>
+                                    Cerrar
+                              </Button>
+                        </div>
                   </motion.div>
             </motion.div>
       )
