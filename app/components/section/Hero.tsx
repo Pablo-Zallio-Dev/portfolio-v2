@@ -21,15 +21,28 @@ export default function Hero() {
                         className=" lg:px-28 "
                   >
                         <section className="flex flex-col justify-center items-start gap-5 xl:gap-10 w-full  lg:w-3/4 min-w-0 ">
-                        <div className=" flex items-center justify-between w-full ">
+                              <div className=" flex items-center justify-between w-full ">
 
-                              <div className="relative w-25 sm:w-40 h-25 sm:h-40">
-                                    <Image src="/images/logo.png" alt={""} fill className=" absolute object-cover " />
+                                    <div className="relative w-25 sm:w-40 h-25 sm:h-40 ">
+                                          <Image
+                                                src="/images/logo-claro.png"
+                                                alt="Pablo Zallio Desarrollo Web"
+                                                fill
+                                                sizes="(min-width: 640px) 192px, 128px"
+                                                className="object-contain dark:hidden"
+                                          />
+                                          <Image
+                                                src="/images/logo-oscuro.png"
+                                                alt="Pablo Zallio Desarrollo Web"
+                                                fill
+                                                sizes="(min-width: 640px) 192px, 128px"
+                                                className="object-contain hidden dark:block"
+                                          />
+                                    </div>
+                                    <AvailabilityBadge>
+                                          Pablo Zallio Desarrollador web
+                                    </AvailabilityBadge>
                               </div>
-                              <AvailabilityBadge>
-                                    Pablo Zallio Desarrollador web
-                              </AvailabilityBadge>
-                        </div>
                               <h1 className=" font-spaceGrotesk  text-3xl sm:text-6xl md:text-7xl md:tracking-tighter text-center md:text-start">
 
                                     Tu proyecto web necesita más que código: necesita <span className=" italic text-brand/80 font-black uppercase">personalidad.</span>

@@ -11,6 +11,7 @@
 :root {
   /* Background */
   --background: oklch(1 0 0);
+  --bgLogo: oklch(72.879% 0.00592 274.89);
   --glass: oklch(1 0 0 / 0.8);
   --bg: oklch(94.567% 0.01296 266.742 / 0.463);
 
@@ -59,6 +60,7 @@
 [data-theme="dark"] {
   /* Background */
   --background: oklch(0.14 0.015 264);
+  --bgLogo:  oklch(68.341% 0.01557 254.732);
   --glass: oklch(0.2 0.02 264 / 0.88);
   --bg: oklch(23.929% 0.00003 271.152 / 0.829);
 
@@ -102,7 +104,8 @@
 
 /* =========================
    TAILWIND THEME TOKENS
-========================= */
+========================= */ 
+
 
 @theme inline {
   /* Fonts */
@@ -111,6 +114,7 @@
 
   /* Background */
   --color-background: var(--background);
+  --color-bgLogo : var(--bgLogo);
   --color-glass: var(--glass);
   --color-bgBackground: var(--bg);
 

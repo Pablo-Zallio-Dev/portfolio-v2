@@ -19,7 +19,7 @@ export default function ServiceCard() {
                         {SERVICES.map((service) => {
                               const Icon = service.icon;
 
-                              return <section key={service.id} className=" flex flex-col justify-between h-full p-5 bg-white rounded-2xl border border-border ">
+                              return <section key={service.id} className=" flex flex-col justify-between h-full p-5 bg-background rounded-2xl border border-border ">
                                     <div className=" flex flex-col justify-between flex-1  ">
 
                                           <Icon className="size-5 text-blue-500" aria-hidden="true" />
