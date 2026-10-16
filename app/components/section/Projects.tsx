@@ -17,7 +17,7 @@ export default function Project() {
                   <FadeIn>
 
                         <section className=" flex flex-col w-full lg:w-3/4 py-12">
-                              <SectionHeader text={"02.- proyectos seleccionados"} />
+                              <SectionHeader text={"03.- proyectos seleccionados"} />
                               <SectionTitle text={"Trabajos recientes."} />
                               <div className=" grid grid-cols-1 py-8 ">
                                     {

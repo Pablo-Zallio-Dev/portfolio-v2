@@ -10,24 +10,35 @@ import Container from "../ui/Container";
 import SectionParagraph from "../common/SectionParagraph";
 import AvailabilityBadge from "../ui/AvailabilityBadge";
 import FadeIn from "../common/FadeIn";
+import { WHATSAPP } from "@/data/contact";
+import Image from "next/image";
 
 export default function Hero() {
       return (
             <FadeIn>
                   <Container
                         id="home"
+                        className=" lg:px-28 "
                   >
                         <section className="flex flex-col justify-center items-start gap-5 xl:gap-10 w-full  lg:w-3/4 min-w-0 ">
-                              <AvailabilityBadge>
-                                    Pablo Zallio Frontend Developer
-                              </AvailabilityBadge>
-                              <h1 className=" font-spaceGrotesk 2xl:w-3/4 font-semibold text-3xl sm:text-6xl md:text-7xl md:tracking-tighter">
+                        <div className=" flex items-center justify-between w-full ">
 
-                                    No solo debe funcionar. También tiene que <span className=" italic text-brand/80">sentirse.</span>
+                              <div className="relative w-25 sm:w-40 h-25 sm:h-40">
+                                    <Image src="/images/logo.png" alt={""} fill className=" absolute object-cover " />
+                              </div>
+                              <AvailabilityBadge>
+                                    Pablo Zallio Desarrollador web
+                              </AvailabilityBadge>
+                        </div>
+                              <h1 className=" font-spaceGrotesk  text-3xl sm:text-6xl md:text-7xl md:tracking-tighter text-center md:text-start">
+
+                                    Tu proyecto web necesita más que código: necesita <span className=" italic text-brand/80 font-black uppercase">personalidad.</span>
                               </h1>
                               <div className=" max-w-5xl ">
-                                    <SectionParagraph>
-                                          Soy Pablo. Antes de construir algo, me gusta pensar en cómo debería sentirse. Empiezo con una idea, exploro sus posibilidades y trato de llevarla un poco más lejos. Después vienen el código, las pruebas y esos pequeños detalles que quizá nadie note, pero que terminan dándole personalidad a lo que construyo.
+                                    <SectionParagraph className=" text-sm ">
+                                          Soy Pablo, Desarrollador Frontend especializado en crear experiencias web que conectan con las personas. Ayudo a marcas y profesionales a dar vida a sus ideas mediante sitios modernos, intuitivos y optimizados para convertir visitantes en clientes.<br />
+                                          <br />
+                                          Para mí, un buen desarrollo no consiste solo en que la web funcione, sino en cómo se siente al navegarla. Por eso cuido cada etapa del proceso: desde la arquitectura técnica y la accesibilidad hasta la velocidad de carga y esos pequeños detalles de diseño que generan confianza desde el primer clic.
                                     </SectionParagraph>
                               </div>
                               <section className=" flex flex-col md:flex-row justify-center md:justify-start items-center  gap-2 w-full pt-8 ">
@@ -38,9 +49,11 @@ export default function Hero() {
                                           </Button>
                                     </Link>
 
-                                    <Link href={"#contact"}>
+                                    <Link href={WHATSAPP.url}
+                                          target="_blank"
+                                          rel="noopener noreferrer">
                                           <Button ariaLabel="Boton para ir a la seccion contacto" variant={"outline"}>
-                                                Contactar
+                                                Pide tu presupuesto
                                           </Button>
                                     </Link>
                               </section>

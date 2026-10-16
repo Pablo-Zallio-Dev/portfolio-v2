@@ -8,39 +8,45 @@ import Form from "../ui/Form";
 import Link from "next/link";
 import FadeIn from "../common/FadeIn";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
 
 export default function Contact() {
       return (
             <Container id="contact" >
                   <FadeIn>
-                  <section className=" flex flex-col w-full lg:w-3/4 py-12">
-                        <div className=" flex flex-col items-center gap-6 ">
-                              <SectionHeader text={"03.- contacto"} />
-                              <SectionTitle center text={"¿Construimos algo interesante?"} />
-                              <div className=" lg:w-3/4 text-center ">
-                                    <SectionParagraph>
-                                          Estoy abierto tanto a colaborar en proyectos freelance como a formar parte de un equipo donde pueda seguir creciendo y aportar valor.
-                                    </SectionParagraph>
-                              </div>
-                              <Link href="mailto:elcorreoquequieres@correo.com">
-                                    <Button ariaLabel="Boton para enviar correo electronico" variant={"primary"}>
-                                          <Mail size={16} />
-                                          <p className="">pablozalliodev@gmail.com</p>
-                                    </Button>
-                              </Link>
-                              <Form />
-                              <div className=" flex justify-center items-center gap-2 font-inter text-xs text-muted-foreground px-6 ">
-                                    <Link className=" flex items-center gap-1 " href={""}>
-                                    <FaGithub />
-                                    Github</Link>
-                                    <p className=" mx-6 ">|</p>
-                                    <Link className=" flex items-center gap-1 " href={""}>Linkedin
-                                    <FaLinkedin size={14}/>
+                        <section className=" flex flex-col w-full lg:w-3/4 py-12">
+                              <div className=" flex flex-col items-center gap-6 ">
+                                    <SectionHeader text={"04.- contacto"} />
+                                    <SectionTitle center text={"¿Construimos algo interesante?"} />
+                                    <div className=" lg:w-3/4 text-center ">
+                                          <SectionParagraph>
+                                                Tienes un negocio y necesitas llegar a tus clientes con una presencia digital más sólida. Escríbeme y hablamos, sin compromiso.
+                                          </SectionParagraph>
+                                    </div>
+                                    <Link href="mailto:elcorreoquequieres@correo.com">
+                                          <Button ariaLabel="Boton para enviar correo electronico" variant={"primary"}>
+                                                <Mail size={16} />
+                                                <p className="">pablozalliodev@gmail.com</p>
+                                          </Button>
                                     </Link>
+                                    <Form />
+                                    <div className=" flex justify-center items-center gap-2 font-inter text-xs text-muted-foreground px-6 ">
+                                          <Link className=" flex items-center gap-1 " target="_blank" href={"https://github.com/Pablo-Zallio-Dev"}>
+                                                Github
+                                                <FaGithub />
+                                          </Link>
+                                          <p className=" mx-6 ">|</p>
+                                          <Link className=" flex items-center gap-1 " target="_blank" href={"https://www.linkedin.com/in/pablozalliodev/"}>Linkedin
+                                                <FaLinkedin size={14} />
+                                          </Link>
+                                            <p className=" mx-6 ">|</p>
+                                          <Link className=" flex items-center gap-1 " target="_blank" href={"https://www.instagram.com/pablozdev/"}>Instagram
+                                                <FaInstagram size={14} />
+                                          </Link>
 
+                                    </div>
                               </div>
-                        </div>
-                  </section>
+                        </section>
                   </FadeIn>
             </Container>
       )

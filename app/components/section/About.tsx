@@ -19,7 +19,7 @@ export default function About() {
                   <FadeIn>
                         <div className=" grid grid-cols-1 gap-16 lg:grid-cols-[1fr_2fr] w-full lg:w-3/4  ">
                               <div className="  flex flex-col lg:flex-col-reverse lg:self-start gap-3 ">
-                                    <SpinningText reverse={true} duration={6} radius={8} className=" my-30 ">Pablo • Zallio • Web • Developer • </SpinningText>
+                                    <SpinningText reverse={true} duration={6} radius={8} className=" my-30 ">Pablo • Zallio • Desarrollo • Web • </SpinningText>
                                     <div className=" ">
                                           <SectionHeader text={"01 - sobre mi"} />
                                           <SectionTitle text={"Un artesano digital con obsesión por el detalle."} />
@@ -28,17 +28,17 @@ export default function About() {
                               <div className=" flex flex-col items-center gap-25 ">
                                     <div className=" flex flex-col gap-4 ">
                                           <SectionParagraph>
-                                                Empecé a programar porque quería construir las cosas que tenía en la cabeza. Desde entonces, he invertido una parte del tiempo en investigar, aprender y tratar de entender cómo hacer que una idea funcione de verdad.
+                                                Empecé a programar por la necesidad de dar vida a las ideas que tenía en la cabeza. Con el tiempo, entendí que un buen sitio web no solo debe verse bien, sino convertirse en una herramienta que genere resultados reales y retornos para quien confía en mí.
                                           </SectionParagraph>
                                           <SectionParagraph>
-                                                Disfruto especialmente ese momento en el que todo empieza a encajar y puedes ver el resultado final. Soy bastante exigente con los detalles, me gusta el código limpio y siempre intento llevar cada proyecto un poco más lejos de lo necesario. No porque todo tenga que ser perfecto, sino porque siempre hay algo más que aprender.
+                                                Mi objetivo es transformar la visión de tu proyecto en una experiencia accesible, rápida e intuitiva que conecte con tus visitantes desde el primer segundo. Cuido el código y los pequeños detalles con la máxima exigencia, no por mero perfeccionismo, sino porque una web optimizada y fluida transmite mayor profesionalidad, genera más confianza y ayuda a convertir más visitas en clientes.
                                           </SectionParagraph>
                                     </div>
                                     <div className=" grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 ">
-                                          <AboutCard icon={Code} titleCard={"Desarrollo Frontend"} textCard={"Interfaces modernas con React, Next.js y TypeScript."} />
-                                          <AboutCard icon={Gauge} titleCard={"UI centrada en el usuario"} textCard={"Diseños limpios, accesibles y orientados a ofrecer la mejor experiencia."} />
-                                          <AboutCard icon={Sparkles} titleCard={"Rendimiento"} textCard={"Aplicaciones optimizadas para ofrecer velocidad, estabilidad y una excelente experiencia."} />
-                                          <AboutCard icon={Layers} titleCard={"Código mantenible"} textCard={"Arquitecturas escalables, reutilizables y fáciles de mantener."} />
+                                          <AboutCard icon={Code} titleCard={"Desarrollo personalizado"} textCard={"Webs y plataformas modernas construidas sin plantillas genéricas, adaptadas 100% a tu marca."} />
+                                          <AboutCard icon={Sparkles} titleCard={"Diseño intuitivo"} textCard={"Interfaces claras, atractivas y accesibles que guían al visitante de forma natural a contactar o comprar."} />
+                                          <AboutCard icon={Gauge} titleCard={"Velocidad y rendimiento"} textCard={"Carga ultrarrápida y navegación fluida para retener visitas, mejorar tu posicionamiento en Google y proyectar máxima confianza."} />
+                                          <AboutCard icon={Layers} titleCard={"Estructura escalable"} textCard={"Construcción sólida y limpia que permite añadir nuevas funciones a tu web sin complicaciones ni costes innecesarios a futuro."} />
                                     </div>
                                     <div className=" flex flex-wrap justify-center gap-4 py-5 px-1.5 xl:px-5  rounded-xl bg-background border border-border shadow-lg/20 ">
                                           {
