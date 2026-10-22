@@ -40,7 +40,7 @@ export default function Contact() {
                                                 <FaLinkedin size={14} />
                                           </Link>
                                             <p className=" mx-6 ">|</p>
-                                          <Link className=" flex items-center gap-1 " target="_blank" href={"https://www.instagram.com/pablozdev/"}>Instagram
+                                          <Link className=" flex items-center gap-1 " target="_blank" href={"https://www.instagram.com/pablozalliodw/"}>Instagram
                                                 <FaInstagram size={14} />
                                           </Link>
 

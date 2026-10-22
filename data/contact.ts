@@ -4,7 +4,7 @@ export interface WhatsAppConfig {
   url: string;
 }
 
-const PHONE = "34XXXXXXXXX";
+const PHONE = "34696075650";
 const MESSAGE = "Hola Pablo, quiero pedirte un presupuesto para mi web.";
 
 export const WHATSAPP: WhatsAppConfig = {
